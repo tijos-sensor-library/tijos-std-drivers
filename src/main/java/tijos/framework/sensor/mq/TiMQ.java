@@ -133,13 +133,14 @@ public class TiMQ implements ITiEventListener {
 	/**
 	 * Gets the analog output value of AOUT
 	 * 
-	 * @return voltage value
+	 * @return raw value  
 	 * @throws IOException
 	 */
-	public double getAnalogOutput() throws IOException {
+	public int getAnalogOutput() throws IOException {
 		if (adcObj == null)
-			return Double.NaN;
-		return adcObj.getVoltageValue(analogChannel);
+			return 0;
+		
+		return adcObj.getRawValue(analogChannel);
 	}
 
 	/**

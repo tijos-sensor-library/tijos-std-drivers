@@ -134,10 +134,11 @@ public class TiGeneralSensor implements ITiEventListener {
 	 * @return voltage value
 	 * @throws IOException
 	 */
-	public double getAnalogOutput() throws IOException {
+	public int getAnalogOutput() throws IOException {
 		if (adcObj == null)
-			return Double.NaN;
-		return adcObj.getVoltageValue(analogChannel);
+			return 0;
+		
+		return adcObj.getRawValue(analogChannel);
 	}
 
 	/**
