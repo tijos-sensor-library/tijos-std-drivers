@@ -69,7 +69,7 @@ public class TiGeneralSensor implements ITiEventListener {
 	public void setEventListener(ITiGeneralSensorEventListener lc) throws IOException {
 		synchronized (this) {
 			if (gernalSensorLc == null && lc != null) {
-				gpioObj.setEventParameters(signalPin, TiGPIO.EVT_FALLINGEDGE, 1000);// >=1ms
+				gpioObj.setEventParameters(signalPin, TiGPIO.EVT_BOTHEDGE, 1000);// >=1ms
 				TiEventService.getInstance().addListener(this);
 				gernalSensorLc = lc;
 			} else if (gernalSensorLc != null && lc == null) {
