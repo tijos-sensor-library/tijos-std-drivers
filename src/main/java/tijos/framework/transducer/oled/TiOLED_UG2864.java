@@ -109,9 +109,9 @@ public class TiOLED_UG2864 {
 	 */
 	public void clear() throws IOException {
 		synchronized (i2cmObj) {
+			byte[] fillBuffer = new byte[128];
 			for (int i = 0; i < 8; i++) {
 				oledSetPosition(i, 0);
-				byte[] fillBuffer = new byte[128];
 				i2cmObj.write(oledAddress, 0x40, fillBuffer, 0, fillBuffer.length);
 			}
 			currentLineId = 0;
