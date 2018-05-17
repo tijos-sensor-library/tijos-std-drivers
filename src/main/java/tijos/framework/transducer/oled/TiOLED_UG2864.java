@@ -3,7 +3,7 @@ package tijos.framework.transducer.oled;
 import java.io.IOException;
 
 import tijos.framework.devicecenter.TiI2CMaster;
-import tijos.framework.text.TiDotMatrix;
+import tijos.framework.util.text.TiDotMatrix;
 
 public class TiOLED_UG2864 {
 	/**
