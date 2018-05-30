@@ -21,5 +21,10 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>tijos.framework</groupId>
+  	  <artifactId>tijos_runtime</artifactId>
+	  <version>3.0.1</version>
+    </dependency>
   </dependencies>
 </project>
