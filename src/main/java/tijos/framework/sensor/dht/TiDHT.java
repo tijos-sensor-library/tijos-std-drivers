@@ -1,4 +1,4 @@
-
+package tijos.framework.sensor.dht;
 
 import java.io.IOException;
 
