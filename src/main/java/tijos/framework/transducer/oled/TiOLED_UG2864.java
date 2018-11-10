@@ -245,7 +245,7 @@ public class TiOLED_UG2864 {
 	 * @return max line number
 	 */
 	public int getMaxLineNumber() {
-		return dotMatrixObj.getVDotNum();
+		return 64 / dotMatrixObj.getVDotNum();
 	}
 
 	/**
@@ -254,6 +254,6 @@ public class TiOLED_UG2864 {
 	 * @return max column number
 	 */
 	public int getMaxColumnNumber() {
-		return dotMatrixObj.getHDotNum();
+		return 128 / dotMatrixObj.getHDotNum();
 	}
 }
